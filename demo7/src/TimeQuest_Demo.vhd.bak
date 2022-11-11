@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------
+-- Anton Bogovik 
+-- 11/04/2022
+-- TIme Quest Demo
+-- Design a simple adder on the DE1-SoC that will allow for a deeper 
+-- look into timing failures, analysis, and eventually timing closure. 
+-------------------------------------------------------------------------
+
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+ENTITY adder IS
+	PORT(
+			clk : in std_logic;  
+			a   : in std_logic_vector (15 downto 0);
+			b   : in std_logic_vector (15 downto 0);
+			-- output --
+			result : out std_logic_vector (16 downto 0);
+	END ENTITY adder;
+	
+ARCHITECTURE rtl of adder is
+	
+	--Signal declaration section --
+	SIGNAL a_beh : std_logic_vector (15 downto 0);
+	SIGNAL b_beh : std_logic_vector (15 downto 0);
+	
+	ADDER: process(clk)
+	BEGIN
+			if falling_edge(clk)
+				a <= a_beh;
+				b <= b_beh;
+				result <= a_beh + b_beh;
+			end if;
+	END PROCESS;
+END ARCHITECTURE rtl;   

@@ -1,0 +1,21 @@
+10:19:57 **** Build of configuration Nios II for project Audio_demo_WORK ****
+make all 
+Info: Building ../Audio_demo_WORK_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Audio_demo_WORK_bsp/
+[BSP build complete]
+Info: Compiling audio_demo.c to obj/default/audio_demo.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Audio_demo_WORK_bsp//HAL/inc -I../Audio_demo_WORK_bsp/ -I../Audio_demo_WORK_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/audio_demo.o audio_demo.c
+Info: Linking Audio_demo_WORK.elf
+nios2-elf-g++  -T'../Audio_demo_WORK_bsp//linker.x' -msys-crt0='../Audio_demo_WORK_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Audio_demo_WORK_bsp/   -Wl,-Map=Audio_demo_WORK.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Audio_demo_WORK.elf obj/default/audio_demo.o -lm -msys-lib=m
+nios2-elf-insert Audio_demo_WORK.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 2 --sidp 0x4021060 --timestamp 1667570823 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "S:/CPET_561/demo6/Audio_demo_support_files" --sopcinfo S:/CPET_561/demo6/Audio_demo_support_files/software/Audio_demo_WORK_bsp/../../nios_system.sopcinfo
+Info: (Audio_demo_WORK.elf) 34 KBytes program size (code + initialized data).
+Info:                       22 KBytes free for stack + heap.
+Info: Creating Audio_demo_WORK.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Audio_demo_WORK.elf >Audio_demo_WORK.objdump
+[Audio_demo_WORK build complete]
+10:20:15 **** Incremental Build of configuration Nios II for project Audio_demo_WORK ****
+make all 
+Info: Building ../Audio_demo_WORK_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Audio_demo_WORK_bsp/
+[BSP build complete]
+[Audio_demo_WORK build complete]

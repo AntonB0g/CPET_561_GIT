@@ -1,0 +1,36 @@
+10:36:10 **** Incremental Build of configuration Nios II for project DEMO4 ****
+make all 
+Info: Building ../DEMO4_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../DEMO4_bsp/
+[BSP build complete]
+[DEMO4 build complete]
+10:38:26 **** Build of configuration Nios II for project DEMO4 ****
+make all 
+Info: Building ../DEMO4_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../DEMO4_bsp/
+[BSP build complete]
+[DEMO4 build complete]
+10:41:04 **** Incremental Build of configuration Nios II for project DEMO4 ****
+make all 
+Info: Building ../DEMO4_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../DEMO4_bsp/
+[BSP build complete]
+[DEMO4 build complete]
+10:41:10 **** Incremental Build of configuration Nios II for project DEMO4 ****
+make all 
+Info: Building ../DEMO4_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../DEMO4_bsp/
+[BSP build complete]
+[DEMO4 build complete]
+10:43:06 **** Incremental Build of configuration Nios II for project DEMO4 ****
+make all 
+Info: Building ../DEMO4_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../DEMO4_bsp/
+[BSP build complete]
+[DEMO4 build complete]
+10:50:44 **** Incremental Build of configuration Nios II for project DEMO4 ****
+make all 
+Info: Building ../DEMO4_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../DEMO4_bsp/
+[BSP build complete]
+[DEMO4 build complete]

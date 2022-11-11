@@ -1,0 +1,6 @@
+22:50:43 **** Clean-only build of configuration Nios II for project Audi_demo_bsp ****
+make clean 
+[BSP clean complete]
+
+22:50:44 Build Finished (took 227ms)
+

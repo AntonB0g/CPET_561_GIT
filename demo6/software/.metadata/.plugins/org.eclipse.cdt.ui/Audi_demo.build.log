@@ -1,0 +1,6 @@
+22:50:45 **** Clean-only build of configuration Nios II for project Audi_demo ****
+make clean 
+[Audi_demo clean complete]
+
+22:50:46 Build Finished (took 252ms)
+
