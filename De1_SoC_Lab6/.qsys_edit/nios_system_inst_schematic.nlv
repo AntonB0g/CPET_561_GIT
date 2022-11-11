@@ -1,0 +1,19 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios_system_inst.nios2_gen2_0.cpu -pg 1
+preplace inst nios_system_inst.pushbuttons -pg 1 -lvl 2 -y 290
+preplace inst nios_system_inst.clk_0 -pg 1 -lvl 1 -y 200
+preplace inst nios_system_inst.nios2_gen2_0.reset_bridge -pg 1
+preplace inst nios_system_inst.jtag_uart_0 -pg 1 -lvl 2 -y 110
+preplace inst nios_system_inst.sysid_qsys_0 -pg 1 -lvl 1 -y 360
+preplace inst nios_system_inst.nios2_gen2_0.clock_bridge -pg 1
+preplace inst nios_system_inst.nios2_gen2_0 -pg 1 -lvl 1 -y 50
+preplace inst nios_system_inst.leds -pg 1 -lvl 1 -y 260
+preplace inst nios_system_inst.RAM_INFR_Custom_IP_0 -pg 1 -lvl 2 -y 30
+preplace inst nios_system_inst -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios_system_inst.onchip_memory2_0 -pg 1 -lvl 2 -y 210
+preplace netloc FAN_IN<net_container>nios_system_inst</net_container>(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_0.debug_mem_slave,(MASTER)nios2_gen2_0.data_master) 1 0 2 80 190 440
+preplace netloc EXPORT<net_container>nios_system_inst</net_container>(SLAVE)nios_system_inst.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system_inst</net_container>(SLAVE)nios_system_inst.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+levelinfo -pg 1 0 50 660
+levelinfo -hier nios_system_inst 60 200 490 650

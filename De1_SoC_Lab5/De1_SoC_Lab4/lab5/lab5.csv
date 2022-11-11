@@ -1,0 +1,38 @@
+# system info lab5 on 2022.10.17.11:06:03
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1666019158
+#
+#
+# Files generated for lab5 on 2022.10.17.11:06:03
+files:
+filepath,kind,attributes,module,is_top
+simulation/lab5.vhd,VHDL,,lab5,true
+simulation/submodules/lab5_hex0.vhd,VHDL,,lab5_hex0,false
+simulation/submodules/lab5_jtag_uart_0.vhd,VHDL,,lab5_jtag_uart_0,false
+simulation/submodules/lab5_nios2_gen2_0.v,VERILOG,,lab5_nios2_gen2_0,false
+simulation/submodules/lab5_onchip_memory2_0.hex,HEX,,lab5_onchip_memory2_0,false
+simulation/submodules/lab5_onchip_memory2_0.vhd,VHDL,,lab5_onchip_memory2_0,false
+simulation/submodules/lab5_pushbuttons.vhd,VHDL,,lab5_pushbuttons,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+lab5.hex0,lab5_hex0
+lab5.hex1,lab5_hex0
+lab5.hex2,lab5_hex0
+lab5.hex4,lab5_hex0
+lab5.hex5,lab5_hex0
+lab5.jtag_uart_0,lab5_jtag_uart_0
+lab5.nios2_gen2_0,lab5_nios2_gen2_0
+lab5.nios2_gen2_0.cpu,lab5_nios2_gen2_0_cpu
+lab5.onchip_memory2_0,lab5_onchip_memory2_0
+lab5.pushbuttons,lab5_pushbuttons
+lab5.servo_controller_ip_0,lab5_servo_controller_ip_0
+lab5.switches,lab5_switches
+lab5.sysid_qsys_0,lab5_sysid_qsys_0
+lab5.mm_interconnect_0,lab5_mm_interconnect_0
+lab5.irq_mapper,lab5_irq_mapper
+lab5.rst_controller,altera_reset_controller

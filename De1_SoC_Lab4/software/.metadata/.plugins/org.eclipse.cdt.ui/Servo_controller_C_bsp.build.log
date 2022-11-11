@@ -1,0 +1,6 @@
+11:40:15 **** Clean-only build of configuration Nios II for project Servo_controller_C_bsp ****
+make clean 
+[BSP clean complete]
+
+11:40:15 Build Finished (took 287ms)
+

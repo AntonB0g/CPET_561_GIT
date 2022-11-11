@@ -1,0 +1,6 @@
+11:40:17 **** Clean-only build of configuration Nios II for project Servo_controller_C ****
+make clean 
+[Servo_controller_C clean complete]
+
+11:40:17 Build Finished (took 229ms)
+

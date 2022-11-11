@@ -1,0 +1,16 @@
+
+State Machine - |top|ServoControlle_NIOS2:top_inst|ServoController:servo_controller_ip_0|State
+Name State.INT_LEFT State.INT_RIGHT State.SWEEP_LEFT State.SWEEP_RIGHT 
+State.SWEEP_RIGHT 0 0 0 0 
+State.SWEEP_LEFT 0 0 1 1 
+State.INT_RIGHT 0 1 0 1 
+State.INT_LEFT 1 0 0 1 
+
+State Machine - |top|ServoControlle_NIOS2:top_inst|ServoControlle_NIOS2_nios2_gen2_0:nios2_gen2_0|ServoControlle_NIOS2_nios2_gen2_0_cpu:cpu|ServoControlle_NIOS2_nios2_gen2_0_cpu_nios2_oci:the_ServoControlle_NIOS2_nios2_gen2_0_cpu_nios2_oci|ServoControlle_NIOS2_nios2_gen2_0_cpu_debug_slave_wrapper:the_ServoControlle_NIOS2_nios2_gen2_0_cpu_debug_slave_wrapper|ServoControlle_NIOS2_nios2_gen2_0_cpu_debug_slave_tck:the_ServoControlle_NIOS2_nios2_gen2_0_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

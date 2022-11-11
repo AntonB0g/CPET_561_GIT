@@ -1,0 +1,1 @@
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ServoControlle_NIOS2/ServoControlle_NIOS2.qip]

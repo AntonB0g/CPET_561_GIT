@@ -1,0 +1,322 @@
+09:55:57 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5112 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+09:56:41 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5112 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+09:59:00 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5112 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+10:08:16 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5224 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+10:09:46 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5224 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+10:25:00 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5224 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+10:25:44 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5224 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+10:31:24 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+[Mem_Test build complete]
+10:31:29 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+[Mem_Test build complete]
+10:32:22 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+[Mem_Test build complete]
+10:45:39 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5232 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+10:46:33 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5232 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+10:48:04 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+[Mem_Test build complete]
+10:51:05 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+[Mem_Test build complete]
+10:55:26 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+[Mem_Test build complete]
+10:56:06 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5212 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+10:58:35 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5216 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+10:59:50 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+[Mem_Test build complete]
+11:02:08 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5220 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+11:03:42 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5232 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+11:05:09 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5240 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+11:06:46 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5104 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+11:12:28 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5104 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+11:13:14 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+[Mem_Test build complete]
+11:14:55 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+[Mem_Test build complete]
+11:15:36 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5104 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]
+11:20:44 **** Incremental Build of configuration Nios II for project Mem_Test ****
+make all 
+Info: Building ../Mem_Test_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mem_Test_bsp/
+[BSP build complete]
+Info: Compiling memory_test.c to obj/default/memory_test.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mem_Test_bsp//HAL/inc -I../Mem_Test_bsp/ -I../Mem_Test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/memory_test.o memory_test.c
+Info: Linking Mem_Test.elf
+nios2-elf-g++  -T'../Mem_Test_bsp//linker.x' -msys-crt0='../Mem_Test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mem_Test_bsp/  -msmallc  -Wl,-Map=Mem_Test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Mem_Test.elf obj/default/memory_test.o -lm -msys-lib=m
+nios2-elf-insert Mem_Test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x9020 --timestamp 1666959474 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system_inst --quartus_project_dir "S:/CPET_561/De1_SoC_Lab6" --jdi ../..//output_files/Custom_Memory_IP.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab6/software/Mem_Test_bsp/../../nios_system_inst.sopcinfo
+Info: (Mem_Test.elf) 5232 Bytes program size (code + initialized data).
+Info:                10 KBytes free for stack + heap.
+Info: Creating Mem_Test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mem_Test.elf >Mem_Test.objdump
+[Mem_Test build complete]

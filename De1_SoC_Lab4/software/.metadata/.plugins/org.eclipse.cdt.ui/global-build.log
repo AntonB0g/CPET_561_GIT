@@ -1,0 +1,21 @@
+13:56:49 **** Build of configuration Nios II for project Last_trial ****
+make all 
+Info: Building ../Last_trial_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Last_trial_bsp/
+[BSP build complete]
+Info: Compiling program.c to obj/default/program.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Last_trial_bsp//HAL/inc -I../Last_trial_bsp/ -I../Last_trial_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/program.o program.c
+Info: Linking Last_trial.elf
+nios2-elf-g++  -T'../Last_trial_bsp//linker.x' -msys-crt0='../Last_trial_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Last_trial_bsp/   -Wl,-Map=Last_trial.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Last_trial.elf obj/default/program.o -lm -msys-lib=m
+nios2-elf-insert Last_trial.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 3 --sidp 0x11078 --timestamp 1666805420 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name ServoControlle_NIOS2 --quartus_project_dir "S:/CPET_561/De1_SoC_Lab4" --jdi ../..//output_files/ServoController.jdi --sopcinfo S:/CPET_561/De1_SoC_Lab4/software/Last_trial_bsp/../../ServoControlle_NIOS2.sopcinfo
+Info: (Last_trial.elf) 24 KBytes program size (code + initialized data).
+Info:                  2088 Bytes free for stack + heap.
+Info: Creating Last_trial.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Last_trial.elf >Last_trial.objdump
+[Last_trial build complete]
+14:12:17 **** Clean-only build of configuration Nios II for project please_work_bsp ****
+make clean 
+[BSP clean complete]
+14:12:19 **** Clean-only build of configuration Nios II for project please_work ****
+make clean 
+[please_work clean complete]

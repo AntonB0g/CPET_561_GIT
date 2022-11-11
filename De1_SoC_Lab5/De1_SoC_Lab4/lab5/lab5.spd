@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/lab5_pushbuttons.vhd"
+   type="VHDL"
+   library="pushbuttons" />
+ <file
+   path="simulation/submodules/lab5_onchip_memory2_0.hex"
+   type="HEX"
+   library="onchip_memory2_0" />
+ <file
+   path="simulation/submodules/lab5_onchip_memory2_0.vhd"
+   type="VHDL"
+   library="onchip_memory2_0" />
+ <file
+   path="simulation/submodules/lab5_nios2_gen2_0.v"
+   type="VERILOG"
+   library="nios2_gen2_0" />
+ <file
+   path="simulation/submodules/lab5_jtag_uart_0.vhd"
+   type="VHDL"
+   library="jtag_uart_0" />
+ <file path="simulation/submodules/lab5_hex0.vhd" type="VHDL" library="hex0" />
+ <file path="simulation/lab5.vhd" type="VHDL" />
+ <topLevel name="lab5" />
+ <deviceFamily name="cyclonev" />
+ <modelMap
+   controllerPath="lab5.onchip_memory2_0"
+   modelPath="lab5.onchip_memory2_0" />
+</simPackage>

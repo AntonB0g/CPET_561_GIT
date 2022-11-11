@@ -1,0 +1,47 @@
+#include "io.h"
+#include <stdio.h>
+#include <stdbool.h>
+#include "system.h"
+#include "alt_types.h"
+#include "sys/alt_irq.h"
+
+// create standard embedded type definitions
+typedef   signed char   sint8;              // signed 8 bit values
+typedef unsigned char   uint8;              // unsigned 8 bit values
+typedef   signed short  sint16;             // signed 16 bit values
+typedef unsigned short  uint16;             // unsigned 16 bit values
+typedef   signed long   sint32;             // signed 32 bit values
+typedef unsigned long   uint32;             // unsigned 32 bit values
+typedef         float   real32;
+
+
+volatile uint32* RAMPtr = (volatile uint32*) RAM_INFR_CUSTOM_IP_0_BASE;
+volatile uint32* LedPtr = (volatile uint32*) LEDS_BASE;
+
+const uint32 data = 0x00000000;
+const uint32 start_address =  0x00000000;
+
+void RAM_test(uint32 s_address, uint32 byte_num, uint32 test_data)
+{
+  uint32 bit_num = 1024 * byte_num;
+
+  for (uint32 i = bit_num; i >= 0; i--)
+  {
+    *(RAMPtr + i) = test_data;
+  };
+
+  for (uint32 i = bit_num; i >= 0; i--)
+  {
+    uint32 temp = *(RAMPtr + i);
+    if (temp != test_data) // data written does not equal to data read => error
+    {
+       *LedPtr = 0xffffffff;
+    }
+  }
+}
+
+int main()
+{
+  RAM_test(start_address, 4, data);
+  return 0;
+}
