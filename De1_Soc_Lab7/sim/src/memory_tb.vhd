@@ -61,15 +61,18 @@ ARCHITECTURE test OF memory_tb IS
     ---------------------------------------------------------------------------
     SIGNAL clk_tb               : std_logic:= '0';
 	SIGNAL reset_n_tb           : std_logic:= '0';
-	SIGNAL address_tb           : std_logic_vector (11 DOWNTO 0) := (others => 'X');
-	SIGNAL writedata_tb         : std_logic_vector (31 DOWNTO 0) := (others => '0');
-	SIGNAL writebyteenable_n_tb : std_logic_vector (3 downto 0)  := (others => 'X');
-	SIGNAL readdata_tb          : std_logic_vector (31 downto 0) := (others => '0');
-	SIGNAL WORD                 : std_logic_vector (31 downto 0) := (others => '1');
-	SIGNAL HALF_WORD1           : std_logic_vector (31 downto 0) := X"22220000"; -- UPPER
-	SIGNAL HALF_WORD2           : std_logic_vector (31 downto 0) := X"00003333"; -- LOWER
-	SIGNAL BYTE                 : std_logic_vector (7 downto 0) := X"44";
-	SIGNAL expected_value       : std_logic_vector (31 downto 0) := (others => '0');
+	SIGNAL address_tb           : std_logic_vector (11 DOWNTO 0)  := (others => 'X');
+	SIGNAL writedata_tb         : std_logic_vector (31 DOWNTO 0)  := X"12345678";
+	SIGNAL writebyteenable_n_tb : std_logic_vector (3 downto 0)   := (others => 'X');
+	SIGNAL readdata_tb          : std_logic_vector (31 downto 0)  := (others => '0');
+	SIGNAL WORD                 : std_logic_vector (31 downto 0)  := X"12345678";
+	SIGNAL HALF_WORD1           : std_logic_vector (31 downto 0)  := X"11110000"; -- UPPER Half word
+	SIGNAL HALF_WORD2           : std_logic_vector (31 downto 0)  := X"00001111"; -- LOWER Half word
+	SIGNAL BYTE0                : std_logic_vector (31 downto 0)  := X"34567812";
+	SIGNAL BYTE1                : std_logic_vector (31 downto 0)  := X"56781234";
+	SIGNAL BYTE2                : std_logic_vector (31 downto 0)  := X"78123456";
+	SIGNAL BYTE3                : std_logic_vector (31 downto 0)  := X"12345678";
+	SIGNAL expected_value       : std_logic_vector (31 downto 0)  := (others => '0');
 	
 BEGIN  -- test
     ---------------------------------------------------------------------------
@@ -106,21 +109,64 @@ BEGIN  -- test
     stimulus : PROCESS
     BEGIN  -- PROCESS stimulus
 		wait for 4 * period;
-		writedata_tb <= WORD;
 		writebyteenable_n_tb <= "0000";
 		FOR i IN 0 TO 4095 LOOP
 			address_tb <= std_logic_vector(to_unsigned(i,12));
-			expected_value <= X"11111111";
+			expected_value <= WORD;
 			wait for 10 ns;
 			WORD_test: assert (readdata_tb = writedata_tb) report "wrong data LOL"; --error
 			wait for period;
+		END LOOP;
+
+		writedata_tb(7 downto 0) <= writedata_tb(31 downto 24);
+		writedata_tb(31 downto 8) <= writedata_tb(23 downto 0);
+		writebyteenable_n_tb <= "1110";
+		FOR i in 0 to 4095 LOOP
+			address_tb <= std_logic_vector(to_unsigned(i,12));
+			expected_value <= BYTE0;
+			wait for 10 ns;
+			LOWEST_BYTE0_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
+			wait for period;
+		END LOOP;
+		
+		writedata_tb(7 downto 0) <= writedata_tb(31 downto 24);
+		writedata_tb(31 downto 8) <= writedata_tb(23 downto 0);
+		writebyteenable_n_tb <= "1101";
+		FOR i in 0 to 4095 LOOP
+			address_tb <= std_logic_vector(to_unsigned(i,12));
+			expected_value <= BYTE1;
+			wait for 10 ns;
+			BYTE1_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
+			wait for period;
+		END LOOP;
+		
+		writedata_tb(7 downto 0) <= writedata_tb(31 downto 24);
+		writedata_tb(31 downto 8) <= writedata_tb(23 downto 0);
+		writebyteenable_n_tb <= "1011";
+		FOR i in 0 to 4095 LOOP
+			address_tb <= std_logic_vector(to_unsigned(i,12));
+			expected_value <= BYTE2;
+			wait for 10 ns;
+			BYTE2_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
+			wait for period;
+		END LOOP;
+		
+		writedata_tb(7 downto 0) <= writedata_tb(31 downto 24);
+		writedata_tb(31 downto 8) <= writedata_tb(23 downto 0);
+		writebyteenable_n_tb <= "0111";
+		FOR i in 0 to 4095 LOOP
+			address_tb <= std_logic_vector(to_unsigned(i,12));
+			expected_value <= BYTE3;
+			wait for 10 ns;
+			BYTE3_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
+			wait for period; 
 		END LOOP;
 		
 		writedata_tb <= HALF_WORD1;
 		writebyteenable_n_tb <= "0011";
 		FOR i in 0 to 4095 LOOP
 			address_tb <= std_logic_vector(to_unsigned(i,12));
-			expected_value <= X"22221111";
+			expected_value <= HALF_WORD1 ;
 			wait for 10 ns;
 			UPPER_HALF_WORD_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
 			wait for period;
@@ -130,59 +176,16 @@ BEGIN  -- test
 		writebyteenable_n_tb <= "1100";
 		FOR i in 0 to 4095 LOOP
 			address_tb <= std_logic_vector(to_unsigned(i,12));
-			expected_value <= X"22223333";
+			expected_value <= HALF_WORD1;
 			wait for 10 ns;
 			LOWER_HALF_WORD_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
 			wait for period;
-		END LOOP;
-		
-		writedata_tb <= writedata_tb (31 downto 8) & BYTE;
-		writebyteenable_n_tb <= "1110";
-		FOR i in 0 to 4095 LOOP
-			address_tb <= std_logic_vector(to_unsigned(i,12));
-			expected_value <= X"22223344";
-			wait for 10 ns;
-			LOWEST_BYTE_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
-			wait for period;
-		END LOOP;
-		
-		--writedata_tb <= writedata_tb (31 downto 8) & std_logic_vector(shift_left(unsigned(BYTE), 8));
-		writedata_tb <= writedata_tb (31 downto 16) & BYTE & BYTE;
-		writebyteenable_n_tb <= "1110";
-		FOR i in 0 to 4095 LOOP
-			address_tb <= std_logic_vector(to_unsigned(i,12));
-			expected_value <= X"22224444";
-			wait for 10 ns;
-			BYTE2_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
-			wait for period;
-		END LOOP;
-		
-/* 		writedata_tb <= writedata_tb (31 downto 8) & std_logic_vector(shift_left(unsigned(BYTE), 16));
-		writebyteenable_n_tb <= "1110";
-		FOR i in 0 to 4095 LOOP
-			address_tb <= std_logic_vector(to_unsigned(i,12));
-			expected_value <= X"22444444";
-			wait for 10 ns;
-			BYTE3_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
-			wait for period;
-		END LOOP;
-		
-		writedata_tb <= writedata_tb (31 downto 8) & std_logic_vector(shift_left(unsigned(BYTE), 24));
-		writebyteenable_n_tb <= "1110";
-		FOR i in 0 to 4095 LOOP
-			address_tb <= std_logic_vector(to_unsigned(i,12));
-			expected_value <= X"44444444";
-			wait for 10 ns;
-			MS_BYTE_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
-			wait for period; */
-			
 		END LOOP;
         -----------------------------------------------------------------------
         -- stop simulation, wait here forever
         -----------------------------------------------------------------------
         wait;
     END PROCESS stimulus;
-
 END ARCHITECTURE test;
 
 -------------------------------------------------------------------------------
