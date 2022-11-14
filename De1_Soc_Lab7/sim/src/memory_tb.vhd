@@ -67,7 +67,7 @@ ARCHITECTURE test OF memory_tb IS
 	SIGNAL readdata_tb          : std_logic_vector (31 downto 0)  := (others => '0');
 	SIGNAL WORD                 : std_logic_vector (31 downto 0)  := X"12345678";
 	SIGNAL HALF_WORD1           : std_logic_vector (31 downto 0)  := X"11110000"; -- UPPER Half word
-	SIGNAL HALF_WORD2           : std_logic_vector (31 downto 0)  := X"00001111"; -- LOWER Half word
+	SIGNAL HALF_WORD2           : std_logic_vector (31 downto 0)  := X"11111111"; -- LOWER Half word
 	SIGNAL BYTE0                : std_logic_vector (31 downto 0)  := X"34567812";
 	SIGNAL BYTE1                : std_logic_vector (31 downto 0)  := X"56781234";
 	SIGNAL BYTE2                : std_logic_vector (31 downto 0)  := X"78123456";
@@ -176,7 +176,7 @@ BEGIN  -- test
 		writebyteenable_n_tb <= "1100";
 		FOR i in 0 to 4095 LOOP
 			address_tb <= std_logic_vector(to_unsigned(i,12));
-			expected_value <= HALF_WORD1;
+			expected_value <= HALF_WORD2;
 			wait for 10 ns;
 			LOWER_HALF_WORD_test : assert (readdata_tb = expected_value) report "wrong data LOL"; --error
 			wait for period;
@@ -187,5 +187,4 @@ BEGIN  -- test
         wait;
     END PROCESS stimulus;
 END ARCHITECTURE test;
-
 -------------------------------------------------------------------------------
