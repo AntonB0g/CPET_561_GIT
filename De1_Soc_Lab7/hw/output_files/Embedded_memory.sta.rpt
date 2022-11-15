@@ -1,5 +1,5 @@
 Timing Analyzer report for Embedded_memory
-Wed Nov 09 17:55:14 2022
+Tue Nov 15 09:57:19 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -102,20 +102,20 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.42        ;
+; Average used               ; 1.58        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.9%      ;
-;     Processor 3            ;   4.8%      ;
-;     Processor 4            ;   4.8%      ;
-;     Processor 5            ;   4.6%      ;
-;     Processor 6            ;   4.6%      ;
-;     Processor 7            ;   4.6%      ;
-;     Processor 8            ;   4.6%      ;
-;     Processor 9            ;   4.6%      ;
-;     Processor 10           ;   4.6%      ;
+;     Processor 2            ;   6.7%      ;
+;     Processor 3            ;   6.6%      ;
+;     Processor 4            ;   6.5%      ;
+;     Processor 5            ;   6.4%      ;
+;     Processor 6            ;   6.4%      ;
+;     Processor 7            ;   6.4%      ;
+;     Processor 8            ;   6.4%      ;
+;     Processor 9            ;   6.4%      ;
+;     Processor 10           ;   6.3%      ;
 +----------------------------+-------------+
 
 
@@ -124,8 +124,8 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                               ; Status ; Read at                  ;
 +-----------------------------------------------------------------------------+--------+--------------------------+
-; nios_system_inst/synthesis/submodules/altera_reset_controller.sdc           ; OK     ; Wed Nov 09 17:55:05 2022 ;
-; nios_system_inst/synthesis/submodules/nios_system_inst_nios2_gen2_0_cpu.sdc ; OK     ; Wed Nov 09 17:55:05 2022 ;
+; nios_system_inst/synthesis/submodules/altera_reset_controller.sdc           ; OK     ; Tue Nov 15 09:57:13 2022 ;
+; nios_system_inst/synthesis/submodules/nios_system_inst_nios2_gen2_0_cpu.sdc ; OK     ; Tue Nov 15 09:57:13 2022 ;
 +-----------------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -664,7 +664,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed Nov 09 17:55:03 2022
+    Info: Processing started: Tue Nov 15 09:57:10 2022
 Info: Command: quartus_sta Embedded_memory -c Embedded_memory
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -864,9 +864,9 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5277 megabytes
-    Info: Processing ended: Wed Nov 09 17:55:14 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 5280 megabytes
+    Info: Processing ended: Tue Nov 15 09:57:19 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:09
 
 

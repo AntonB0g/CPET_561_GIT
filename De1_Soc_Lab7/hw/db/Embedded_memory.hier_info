@@ -5,14 +5,14 @@ CLOCK_50 => key0_d2.CLK
 CLOCK_50 => key0_d1.CLK
 KEY => nios_system_inst:top_inst.pushbuttons_export
 KEY => key0_d1.DATAIN
-LEDR[0] << nios_system_inst:top_inst.leds_export[0]
-LEDR[1] << nios_system_inst:top_inst.leds_export[1]
-LEDR[2] << nios_system_inst:top_inst.leds_export[2]
-LEDR[3] << nios_system_inst:top_inst.leds_export[3]
-LEDR[4] << nios_system_inst:top_inst.leds_export[4]
-LEDR[5] << nios_system_inst:top_inst.leds_export[5]
-LEDR[6] << nios_system_inst:top_inst.leds_export[6]
-LEDR[7] << nios_system_inst:top_inst.leds_export[7]
+LEDR[0] <= nios_system_inst:top_inst.leds_export[0]
+LEDR[1] <= nios_system_inst:top_inst.leds_export[1]
+LEDR[2] <= nios_system_inst:top_inst.leds_export[2]
+LEDR[3] <= nios_system_inst:top_inst.leds_export[3]
+LEDR[4] <= nios_system_inst:top_inst.leds_export[4]
+LEDR[5] <= nios_system_inst:top_inst.leds_export[5]
+LEDR[6] <= nios_system_inst:top_inst.leds_export[6]
+LEDR[7] <= nios_system_inst:top_inst.leds_export[7]
 
 
 |top|nios_system_inst:top_inst
