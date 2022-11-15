@@ -106,6 +106,6 @@ BEGIN
 		END IF;
 	END IF;
 	END PROCESS RamBlock3;
- 
+	-- I am not sure if this is the right way to do it, but it does not work. What is the purpose of the read_addr?
 	readdata <= RAM3(conv_integer(read_addr)) & RAM2(conv_integer(read_addr)) & RAM1(conv_integer(read_addr)) & RAM0(conv_integer(read_addr));
 END ARCHITECTURE rtl;
