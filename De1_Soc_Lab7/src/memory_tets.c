@@ -131,14 +131,14 @@ void ISR()
 int main()
 {
 	*LedPtr = 0x00;
-	alt_ic_isr_register(PUSHBUTTONS_IRQ_INTERRUPT_CONTROLLER_ID,PUSHBUTTONS_IRQ_TYPE,ISR,0,0);
+	alt_ic_isr_register(PUSHBUTTONS_IRQ_INTERRUPT_CONTROLLER_ID,PUSHBUTTONS_IRQ,ISR,0,0);
 	*(KeyPtr+2) = 0x2; //set the interrupt mask for KEY1
 	while(Test){
+		RAM_test(start_address, 16384, WORD_test_data, 32);
+		*LedPtr = 0x00;
 		RAM_test(start_address, 16384, BYTE_test_data, 8);
 		*LedPtr = 0x00;
 		RAM_test(start_address, 16384, HALF_test_data, 16);
-		*LedPtr = 0x00;
-		RAM_test(start_address, 16384, WORD_test_data, 32);
 		*LedPtr = 0x00;
 	};
   return 0;

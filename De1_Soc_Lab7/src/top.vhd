@@ -42,14 +42,14 @@ END ENTITY top;
 
 ARCHITECTURE arch OF top IS
 
-COMPONENT nios_system_inst_ver3 IS
+COMPONENT nios_system_inst_ver4 IS
 		PORT(
 			clk_clk            : IN  std_logic                    := 'X';
 			leds_export        : OUT std_logic_vector(7 DOWNTO 0);      
 			pushbuttons_export : IN  std_logic                    := 'X';
 			reset_reset_n      : IN  std_logic                    := 'X'
 		);
-	END COMPONENT nios_system_inst_ver3;
+	END COMPONENT nios_system_inst_ver4;
 	
 	SIGNAL key0_d1 : std_logic;
 	SIGNAL key0_d2 : std_logic;
@@ -68,7 +68,7 @@ BEGIN
   
    reset_n <= key0_d3;
 
-	top_inst : COMPONENT nios_system_inst_ver3
+	top_inst : COMPONENT nios_system_inst_ver4
 		PORT MAP(
 			-- former signals  => inst signals (TOP)
 			clk_clk            => CLOCK_50, -- clk.clk

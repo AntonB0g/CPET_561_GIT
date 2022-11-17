@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Nov 17 15:15:47 2022
+Fitter Status : Successful - Thu Nov 17 16:53:30 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : Embedded_memory
 Top-level Entity Name : top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 730 / 32,070 ( 2 % )
+Logic utilization (in ALMs) : 726 / 32,070 ( 2 % )
 Total registers : 965
 Total pins : 11 / 457 ( 2 % )
 Total virtual pins : 0

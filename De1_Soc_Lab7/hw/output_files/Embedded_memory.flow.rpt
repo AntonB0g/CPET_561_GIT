@@ -1,5 +1,5 @@
 Flow report for Embedded_memory
-Thu Nov 17 15:16:09 2022
+Thu Nov 17 16:54:00 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov 17 15:16:00 2022           ;
+; Flow Status                     ; Successful - Thu Nov 17 16:53:48 2022           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Embedded_memory                                 ;
 ; Top-level Entity Name           ; top                                             ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 730 / 32,070 ( 2 % )                            ;
+; Logic utilization (in ALMs)     ; 726 / 32,070 ( 2 % )                            ;
 ; Total registers                 ; 965                                             ;
 ; Total pins                      ; 11 / 457 ( 2 % )                                ;
 ; Total virtual pins              ; 0                                               ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/17/2022 15:14:00 ;
+; Start date & time ; 11/17/2022 16:51:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Embedded_memory     ;
 +-------------------+---------------------+
@@ -78,21 +78,21 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------------------+-----------------+-----------------------+------------+
 ; Assignment Name                     ; Value                                                                   ; Default Value   ; Entity Name           ; Section Id ;
 +-------------------------------------+-------------------------------------------------------------------------+-----------------+-----------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 194042950431042.166871604002980                                         ; --              ; --                    ; --         ;
+; COMPILER_SIGNATURE_ID               ; 154946508794421.166872188502544                                         ; --              ; --                    ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                      ; --              ; --                    ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                       ; --              ; --                    ; --         ;
-; MISC_FILE                           ; nios_system_inst_4/synthesis/../nios_system_inst_ver3.cmp               ; --              ; --                    ; --         ;
-; MISC_FILE                           ; nios_system_inst_4/synthesis/../../nios_system_inst_ver3.qsys           ; --              ; --                    ; --         ;
+; MISC_FILE                           ; nios_system_inst_5/synthesis/../nios_system_inst_ver4.cmp               ; --              ; --                    ; --         ;
+; MISC_FILE                           ; nios_system_inst_5/synthesis/../../nios_system_inst_ver4.qsys           ; --              ; --                    ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                  ; --              ; top                   ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                  ; --              ; top                   ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                  ; --              ; top                   ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                     ; --              ; --                    ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                   ; --              ; --                    ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                            ; --              ; --                    ; --         ;
-; SLD_FILE                            ; nios_system_inst_4/synthesis/nios_system_inst_ver3.regmap               ; --              ; --                    ; --         ;
-; SLD_FILE                            ; nios_system_inst_4/synthesis/nios_system_inst_ver3.debuginfo            ; --              ; --                    ; --         ;
-; SLD_INFO                            ; QSYS_NAME nios_system_inst_ver3 HAS_SOPCINFO 1 GENERATION_ID 1668715977 ; --              ; nios_system_inst_ver3 ; --         ;
-; SOPCINFO_FILE                       ; nios_system_inst_4/synthesis/../../nios_system_inst_ver3.sopcinfo       ; --              ; --                    ; --         ;
+; SLD_FILE                            ; nios_system_inst_5/synthesis/nios_system_inst_ver4.regmap               ; --              ; --                    ; --         ;
+; SLD_FILE                            ; nios_system_inst_5/synthesis/nios_system_inst_ver4.debuginfo            ; --              ; --                    ; --         ;
+; SLD_INFO                            ; QSYS_NAME nios_system_inst_ver4 HAS_SOPCINFO 1 GENERATION_ID 1668718495 ; --              ; nios_system_inst_ver4 ; --         ;
+; SOPCINFO_FILE                       ; nios_system_inst_5/synthesis/../../nios_system_inst_ver4.sopcinfo       ; --              ; --                    ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                      ; --              ; --                    ; --         ;
 ; TOP_LEVEL_ENTITY                    ; top                                                                     ; Embedded_memory ; --                    ; --         ;
 +-------------------------------------+-------------------------------------------------------------------------+-----------------+-----------------------+------------+
@@ -103,11 +103,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 5027 MB             ; 00:00:39                           ;
-; Fitter               ; 00:01:04     ; 1.1                     ; 7396 MB             ; 00:04:34                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4863 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.6                     ; 5285 MB             ; 00:00:09                           ;
-; Total                ; 00:01:56     ; --                      ; --                  ; 00:05:28                           ;
+; Analysis & Synthesis ; 00:00:45     ; 1.0                     ; 5005 MB             ; 00:00:44                           ;
+; Fitter               ; 00:01:07     ; 1.1                     ; 7022 MB             ; 00:03:32                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4874 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:11     ; 1.4                     ; 5229 MB             ; 00:00:10                           ;
+; Total                ; 00:02:13     ; --                      ; --                  ; 00:04:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,10 +116,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; gol-1360-10      ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; gol-1360-10      ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; gol-1360-10      ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; gol-1360-10      ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; ent-3125-02      ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; ent-3125-02      ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; ent-3125-02      ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; ent-3125-02      ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
