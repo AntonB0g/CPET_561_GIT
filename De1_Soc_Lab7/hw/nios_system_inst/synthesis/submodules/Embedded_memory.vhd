@@ -76,7 +76,7 @@ BEGIN
 		ELSIF (writebyteenable_n(0) = '0') THEN
 			RAM0(conv_integer(address)) <= writedata(7 downto 0);
 		END IF;
-	read_addr <= address;
+	read_addr <= address; -- read_addr is used for sychronization
 	END IF;
 	END PROCESS RamBlock0;
 	
@@ -106,6 +106,6 @@ BEGIN
 		END IF;
 	END IF;
 	END PROCESS RamBlock3;
- 
+	-- I am using read_addr to read from the RAMs. I am accessing the data at the read_addr of the RAM blocks.
 	readdata <= RAM3(conv_integer(read_addr)) & RAM2(conv_integer(read_addr)) & RAM1(conv_integer(read_addr)) & RAM0(conv_integer(read_addr));
 END ARCHITECTURE rtl;
