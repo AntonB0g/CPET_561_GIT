@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="alt_sld_fab" kind="alt_sld_fab" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2022.11.16.20:01:52 -->
+ <!-- 2022.11.17.15:14:25 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_DEVICE_FAMILY">
   <type>java.lang.String</type>
@@ -56,7 +56,7 @@
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>dc96b312da7843bf0a14</value>
+   <value>823f2bede10a3b474b8d</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -104,7 +104,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="EP_INFOS">
    <type>java.lang.String</type>
-   <value>{hpath {nios_system_inst:top_inst|nios_system_inst_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:nios_system_inst_jtag_uart_0_alt_jtag_atlantic} } {hpath {nios_system_inst:top_inst|nios_system_inst_nios2_gen2_0:nios2_gen2_0|nios_system_inst_nios2_gen2_0_cpu:cpu|nios_system_inst_nios2_gen2_0_cpu_nios2_oci:the_nios_system_inst_nios2_gen2_0_cpu_nios2_oci|nios_system_inst_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_inst_nios2_gen2_0_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_system_inst_nios2_gen2_0_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } </value>
+   <value>{hpath {nios_system_inst_ver3:top_inst|nios_system_inst_ver3_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:nios_system_inst_ver3_jtag_uart_0_alt_jtag_atlantic} } {hpath {nios_system_inst_ver3:top_inst|nios_system_inst_ver3_nios2_gen2_0:nios2_gen2_0|nios_system_inst_ver3_nios2_gen2_0_cpu:cpu|nios_system_inst_ver3_nios2_gen2_0_cpu_nios2_oci:the_nios_system_inst_ver3_nios2_gen2_0_cpu_nios2_oci|nios_system_inst_ver3_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios_system_inst_ver3_nios2_gen2_0_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_system_inst_ver3_nios2_gen2_0_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst} } </value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2181,7 +2181,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>dc96b312da7843bf0a14</value>
+   <value>823f2bede10a3b474b8d</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

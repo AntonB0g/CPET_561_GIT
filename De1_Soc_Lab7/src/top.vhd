@@ -34,7 +34,7 @@ USE ieee.std_logic_1164.ALL;
 ENTITY top IS
   PORT(
     CLOCK_50 : IN  std_logic;
-    KEY      : IN  std_logic;
+    KEY      : IN  std_logic_vector(1 downto 0);
     --
     LEDR     : OUT std_logic_vector(7 DOWNTO 0)
     );
@@ -42,14 +42,14 @@ END ENTITY top;
 
 ARCHITECTURE arch OF top IS
 
-COMPONENT nios_system_inst IS
+COMPONENT nios_system_inst_ver3 IS
 		PORT(
 			clk_clk            : IN  std_logic                    := 'X';
 			leds_export        : OUT std_logic_vector(7 DOWNTO 0);      
 			pushbuttons_export : IN  std_logic                    := 'X';
 			reset_reset_n      : IN  std_logic                    := 'X'
 		);
-	END COMPONENT nios_system_inst;
+	END COMPONENT nios_system_inst_ver3;
 	
 	SIGNAL key0_d1 : std_logic;
 	SIGNAL key0_d2 : std_logic;
@@ -60,7 +60,7 @@ BEGIN
 	synch_Reses: PROCESS (CLOCK_50) 
 	BEGIN
 		IF (rising_edge(CLOCK_50)) THEN
-			key0_d1 <= KEY;
+			key0_d1 <= KEY(0);
 			key0_d2 <= key0_d1;
 			key0_d3 <= key0_d2;
 		END IF;
@@ -68,12 +68,12 @@ BEGIN
   
    reset_n <= key0_d3;
 
-	top_inst : COMPONENT nios_system_inst
+	top_inst : COMPONENT nios_system_inst_ver3
 		PORT MAP(
 			-- former signals  => inst signals (TOP)
 			clk_clk            => CLOCK_50, -- clk.clk
 			leds_export        => LEDR,     -- leds.export
-			pushbuttons_export => KEY,      -- pushbuttons.export
+			pushbuttons_export => KEY(1),      -- pushbuttons.export
 			reset_reset_n      => reset_n   -- reset.reset_n
 		);
 END arch;

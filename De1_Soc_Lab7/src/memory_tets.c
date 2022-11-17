@@ -13,7 +13,9 @@ typedef unsigned long   uint32;             // unsigned 32 bit values
 typedef         float   real32;
 
 
-volatile uint32* RAMPtr = (volatile uint32*) INFERRED_RAM_BE_0_BASE;
+volatile uint32* WORDPtr = (volatile uint32*) INFERRED_RAM_BE_0_BASE;
+volatile uint16* HALFPtr = (volatile uint16*) INFERRED_RAM_BE_0_BASE;
+volatile uint8* BYTEPtr = (volatile uint8*) INFERRED_RAM_BE_0_BASE;
 volatile uint8* LedPtr = (volatile uint8*) LEDS_BASE;
 volatile uint32* KeyPtr = (volatile uint32*) PUSHBUTTONS_BASE;
 volatile uint32* JTAG_Ptr = (volatile uint32*) JTAG_UART_0_BASE;
@@ -21,7 +23,7 @@ volatile uint32* JTAG_Ptr = (volatile uint32*) JTAG_UART_0_BASE;
 uint32 BYTE_test_data = 0x00000000; // actual data is 0x00
 uint32 HALF_test_data = 0x00001234;// actual data is 0x1234
 uint32 WORD_test_data = 0xABCDEF90;// already actual data
-uint8  byte_data = 0x00;
+uint8  byte_data = 0x01;
 uint32 byte_num = 0x00000000;
 uint16 half_data = 0x0000;
 uint32 halfs = 0x00000000;
@@ -41,12 +43,12 @@ void RAM_test(uint32 s_address, uint32 ram_size, uint32 test_data, uint32 access
 
 			for (uint32 i = byte_num -1; i > 0; i--)
 			{
-				*(RAMPtr + i) = test_data;
+				*(BYTEPtr + i) = test_data;
 			};
 
 			for (uint32 i = byte_num-1; i > 0; i--)
 			{
-				uint32 temp = *(RAMPtr + i);
+				uint32 temp = *(BYTEPtr + i);
 				if (temp != test_data) // data written does not equal to data read => error
 				{
 					*LedPtr = 0xff;
@@ -65,12 +67,12 @@ void RAM_test(uint32 s_address, uint32 ram_size, uint32 test_data, uint32 access
 
 			for (uint32 i = halfs -1; i > 0; i--)
 			{
-				*(RAMPtr + i) = test_data;
+				*(HALFPtr + i) = test_data;
 			};
 
 			for (uint32 i = halfs-1; i > 0; i--)
 			{
-				uint32 temp = *(RAMPtr + i);
+				uint32 temp = *(HALFPtr + i);
 				if (temp != test_data) // data written does not equal to data read => error
 				{
 					*LedPtr = 0xff;
@@ -88,12 +90,12 @@ void RAM_test(uint32 s_address, uint32 ram_size, uint32 test_data, uint32 access
 
 			for (uint32 i = words -1; i > 0; i--)
 			{
-				*(RAMPtr + i) = test_data;
+				*(WORDPtr + i) = test_data;
 			};
 
 			for (uint32 i = words-1; i > 0; i--)
 			{
-				uint32 temp = *(RAMPtr + i);
+				uint32 temp = *(WORDPtr + i);
 				if (temp != test_data) // data written does not equal to data read => error
 				{
 					*LedPtr = 0xff;

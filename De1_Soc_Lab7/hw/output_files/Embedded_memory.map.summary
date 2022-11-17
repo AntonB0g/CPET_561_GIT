@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Nov 16 20:02:05 2022
+Analysis & Synthesis Status : Successful - Thu Nov 17 15:14:39 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : Embedded_memory
 Top-level Entity Name : top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 956
-Total pins : 10
+Total registers : 955
+Total pins : 11
 Total virtual pins : 0
 Total block memory bits : 273,408
 Total DSP Blocks : 0

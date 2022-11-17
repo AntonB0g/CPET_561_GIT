@@ -40,7 +40,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY",
+					"name" : "KEY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
 					"strict" : false
 				}
 			]

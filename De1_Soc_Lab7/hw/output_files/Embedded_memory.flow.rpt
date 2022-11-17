@@ -1,5 +1,5 @@
 Flow report for Embedded_memory
-Wed Nov 16 20:03:35 2022
+Thu Nov 17 15:16:09 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Wed Nov 16 20:03:25 2022           ;
+; Flow Status                     ; Successful - Thu Nov 17 15:16:00 2022           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Embedded_memory                                 ;
 ; Top-level Entity Name           ; top                                             ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 722 / 32,070 ( 2 % )                            ;
-; Total registers                 ; 972                                             ;
-; Total pins                      ; 10 / 457 ( 2 % )                                ;
+; Logic utilization (in ALMs)     ; 730 / 32,070 ( 2 % )                            ;
+; Total registers                 ; 965                                             ;
+; Total pins                      ; 11 / 457 ( 2 % )                                ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 273,408 / 4,065,280 ( 7 % )                     ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
@@ -67,35 +67,35 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/16/2022 20:01:25 ;
+; Start date & time ; 11/17/2022 15:14:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Embedded_memory     ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                           ;
-+-------------------------------------+--------------------------------------------------------------------+-----------------+------------------+------------+
-; Assignment Name                     ; Value                                                              ; Default Value   ; Entity Name      ; Section Id ;
-+-------------------------------------+--------------------------------------------------------------------+-----------------+------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 194042950431042.166864688503612                                    ; --              ; --               ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                 ; --              ; --               ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                  ; --              ; --               ; --         ;
-; MISC_FILE                           ; nios_system_inst/synthesis/../nios_system_inst.cmp                 ; --              ; --               ; --         ;
-; MISC_FILE                           ; nios_system_inst/synthesis/../../nios_system_inst.qsys             ; --              ; --               ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                             ; --              ; top              ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                             ; --              ; top              ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                             ; --              ; top              ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                ; --              ; --               ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                              ; --              ; --               ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                       ; --              ; --               ; --         ;
-; SLD_FILE                            ; nios_system_inst/synthesis/nios_system_inst.regmap                 ; --              ; --               ; --         ;
-; SLD_FILE                            ; nios_system_inst/synthesis/nios_system_inst.debuginfo              ; --              ; --               ; --         ;
-; SLD_INFO                            ; QSYS_NAME nios_system_inst HAS_SOPCINFO 1 GENERATION_ID 1668646757 ; --              ; nios_system_inst ; --         ;
-; SOPCINFO_FILE                       ; nios_system_inst/synthesis/../../nios_system_inst.sopcinfo         ; --              ; --               ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                                 ; --              ; --               ; --         ;
-; TOP_LEVEL_ENTITY                    ; top                                                                ; Embedded_memory ; --               ; --         ;
-+-------------------------------------+--------------------------------------------------------------------+-----------------+------------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                     ;
++-------------------------------------+-------------------------------------------------------------------------+-----------------+-----------------------+------------+
+; Assignment Name                     ; Value                                                                   ; Default Value   ; Entity Name           ; Section Id ;
++-------------------------------------+-------------------------------------------------------------------------+-----------------+-----------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 194042950431042.166871604002980                                         ; --              ; --                    ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                      ; --              ; --                    ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                       ; --              ; --                    ; --         ;
+; MISC_FILE                           ; nios_system_inst_4/synthesis/../nios_system_inst_ver3.cmp               ; --              ; --                    ; --         ;
+; MISC_FILE                           ; nios_system_inst_4/synthesis/../../nios_system_inst_ver3.qsys           ; --              ; --                    ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                  ; --              ; top                   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                  ; --              ; top                   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                  ; --              ; top                   ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                     ; --              ; --                    ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                   ; --              ; --                    ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                            ; --              ; --                    ; --         ;
+; SLD_FILE                            ; nios_system_inst_4/synthesis/nios_system_inst_ver3.regmap               ; --              ; --                    ; --         ;
+; SLD_FILE                            ; nios_system_inst_4/synthesis/nios_system_inst_ver3.debuginfo            ; --              ; --                    ; --         ;
+; SLD_INFO                            ; QSYS_NAME nios_system_inst_ver3 HAS_SOPCINFO 1 GENERATION_ID 1668715977 ; --              ; nios_system_inst_ver3 ; --         ;
+; SOPCINFO_FILE                       ; nios_system_inst_4/synthesis/../../nios_system_inst_ver3.sopcinfo       ; --              ; --                    ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                      ; --              ; --                    ; --         ;
+; TOP_LEVEL_ENTITY                    ; top                                                                     ; Embedded_memory ; --                    ; --         ;
++-------------------------------------+-------------------------------------------------------------------------+-----------------+-----------------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -103,11 +103,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 5026 MB             ; 00:00:38                           ;
-; Fitter               ; 00:01:03     ; 1.1                     ; 7389 MB             ; 00:04:37                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4871 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.6                     ; 5285 MB             ; 00:00:10                           ;
-; Total                ; 00:01:55     ; --                      ; --                  ; 00:05:31                           ;
+; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 5027 MB             ; 00:00:39                           ;
+; Fitter               ; 00:01:04     ; 1.1                     ; 7396 MB             ; 00:04:34                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4863 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.6                     ; 5285 MB             ; 00:00:09                           ;
+; Total                ; 00:01:56     ; --                      ; --                  ; 00:05:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
