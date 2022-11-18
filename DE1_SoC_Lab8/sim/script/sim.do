@@ -1,6 +1,6 @@
 vlib work
-vcom -93 -quiet -work work ../src/raminfr_be.vhd
-vcom -93 -quiet -work work ../src/raminfr_be_tb2.vhd
-vsim -voptargs=+acc -msgmode both raminfr_be_tb
+vcom -93 -work work ../../src/low_pass_filter.vhd
+vcom -93 -work work ../src/low_pass_filter_tb.vhd
+vsim -voptargs=+acc -msgmode both low_pass_filter_tb
 do wave.do
-run -all
+run 10 ms
