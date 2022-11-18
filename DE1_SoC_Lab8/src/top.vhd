@@ -2,9 +2,9 @@
 --***************************  VHDL Source Code  ******************************
 --*****************************************************************************
 --
---  DESIGNER NAME:  <enter your name here>
+--  DESIGNER NAME:  Anton Bogovik
 --
---       LAB NAME:  Labx: <name of lab>
+--       LAB NAME:  Lab8: Filters
 --
 --      FILE NAME:  top.vhd
 --
@@ -20,16 +20,13 @@
 -- |  DATE    | USER | Ver |  Description                                  |
 -- |==========+======+=====+================================================
 -- |          |      |     |
--- | 08/01/20 | xxx  | 1.0 | Created
+-- | 11/17/22 | xxx  | 1.0 | Created
 -- |          |      |     |
 --
 --*****************************************************************************
 --*****************************************************************************
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-
-LIBRARY work;
-USE work.processor_pkg.ALL;
 
 ENTITY top IS
   PORT (
