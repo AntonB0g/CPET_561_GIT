@@ -118,7 +118,7 @@ addition: process(clk)
 variable result : signed (33 downto 0) := (others => '0');
 begin
     for i in 0 to 16 loop
-        result := result + signed(res(i)(30 downto 15));
+        result := result + signed(res(i));
     end loop;
     output <= std_logic_vector(result(15 downto 0));
 end process addition;
