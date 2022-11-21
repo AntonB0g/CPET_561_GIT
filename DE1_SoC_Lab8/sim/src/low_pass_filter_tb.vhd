@@ -97,8 +97,8 @@ BEGIN  -- test
     -- the process will apply the test vectors to the UUT
     ---------------------------------------------------------------------------
     stimulus : process
-        file read_file : text open read_mode is "./src/verification_src/one_cycle_integer.csv";
-        file results_file : text open write_mode is "./src/verification_src/output_waveform.csv";
+        file read_file : text open read_mode is "../src/verification_src/one_cycle_200_8k.csv";
+        file results_file : text open write_mode is "../src/verification_src/output_waveform.csv";
         variable lineIn : line;
         variable lineOut : line;
         variable readValue : integer;
@@ -107,10 +107,10 @@ BEGIN  -- test
         wait for 100 ns;
         -- Read data from file into an array
         for i in 0 to 39 loop
-        readline(read_file, lineIn);
-        read(lineIn, readValue);
-        audioSampleArray(i) <= to_signed(readValue, 16);
-        wait for 50 ns;
+            readline(read_file, lineIn);
+            read(lineIn, readValue);
+            audioSampleArray(i) <= to_signed(readValue, 16);
+            wait for 50 ns;
         end loop;
         file_close(read_file);
         
@@ -118,9 +118,9 @@ BEGIN  -- test
         for i in 1 to 10 loop
             for j in 0 to 39 loop
                 data_in_tb <= std_logic_vector(audioSampleArray(j));
-                filter_en_tb <= '0';
-                wait for period;
                 filter_en_tb <= '1';
+                wait for period;
+                filter_en_tb <= '0';
                 wait for period;
 
                 -- Read the data from the array and apply it to Data_In

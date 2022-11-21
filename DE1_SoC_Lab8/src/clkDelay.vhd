@@ -49,10 +49,10 @@ USE ieee.std_logic_signed.ALL;
 ENTITY  clkDelay IS
 PORT(
     clk      : IN std_logic;
-    enbale_n : IN std _logic;
+    enable_n : IN std_logic;
     signal_in: IN std_logic_vector(15 downto 0);
     --
-    signal_out : OUT std _logic_vector(15 downto 0)
+    signal_out : OUT std_logic_vector(15 downto 0)
 );
 END clkDelay;
 

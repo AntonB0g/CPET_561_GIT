@@ -1,17 +1,20 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -divider -height 30 " TB"
-add wave -noupdate  -radix binary /low_pass_filter_tb/clk_tb
-add wave -noupdate  -radix binary /low_pass_filter_tb/reset_n_tb
+add wave -divider "TB"
+add wave -noupdate -radix binary /low_pass_filter_tb/clk_tb
+add wave -noupdate -radix binary /low_pass_filter_tb/reset_n_tb
 add wave -noupdate -radix hexadecimal /low_pass_filter_tb/data_in_tb
 add wave -noupdate -radix binary /low_pass_filter_tb/filter_en_tb
 add wave -noupdate -radix binary /low_pass_filter_tb/data_out_tb
-add wave -divider -height 30 " UUT"
-add wave -noupdate -radix binary /low_pass_filter_tb/UUT/clk_tb
-add wave -noupdate -radix binary /low_pass_filter_tb/UUT/reset_n_tb
-add wave -noupdate -radix hexadecimal  /low_pass_filter_tb/UUT/data_in_tb
-add wave -noupdate -radix hexadecimal /low_pass_filter_tb/UUT/filter_en_tb
-add wave -noupdate -radix binary /low_pass_filter_tb/UUT/data_out_tb
+add wave -divider "UUT"
+add wave -noupdate -radix binary /low_pass_filter_tb/UUT/clk
+add wave -noupdate -radix binary /low_pass_filter_tb/UUT/reset_n
+add wave -noupdate -radix hexadecimal /low_pass_filter_tb/UUT/data_in
+add wave -noupdate -radix hexadecimal /low_pass_filter_tb/UUT/filter_en
+add wave -noupdate -radix binary /low_pass_filter_tb/UUT/data_out
+add wave -noupdate  sim:/low_pass_filter_tb/UUT/output
+add wave -noupdate  sim:/low_pass_filter_tb/UUT/input_signal
+add wave -noupdate  sim:/low_pass_filter_tb/UUT/res
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {793569513 ps} 0}
 quietly wave cursor active 1
