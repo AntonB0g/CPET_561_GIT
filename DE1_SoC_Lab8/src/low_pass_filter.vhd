@@ -83,11 +83,11 @@ END COMPONENT;
     -- define your signals here
     -- format: signal abc : <type>;
     ---------------------------------------------------------------------------
-signal output: std_logic_vector (15 downto 0);
+signal output: std_logic_vector (15 downto 0) := (others => '0');
 type vector17_16 is array (natural range 0 to 16) of std_logic_vector(15 downto 0);
 type vector17_32 is array (natural range 0 to 16) of std_logic_vector(31 downto 0);
-signal input_signal: vector17_16;
-signal res: vector17_32;
+signal input_signal: vector17_16 := (others=> (others=>'0'));
+signal res: vector17_32 := (others=> (others=>'0'));
 type coeff_array is array (16 downto 0) of std_logic_vector(15 downto 0);
 constant signal_coeff: coeff_array := (X"0051", X"00BA", X"01E1", X"0408", X"071A", X"0AAC", X"0E11", X"107F",
                                        X"1161", X"107F", X"0E11", X"0AAC", X"071A", X"0408", X"01E1", X"00BA", X"0051");
