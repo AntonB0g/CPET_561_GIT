@@ -95,18 +95,18 @@ constant signal_coeff: coeff_array := (X"0051", X"00BA", X"01E1", X"0408", X"071
 BEGIN
 input_signal(0) <= data_in;
 
-Mult_Gen:
-    for i in 0 to 16 generate
-      MultX: multiplier PORT MAP
+Mult_Gen: for i in 0 to 16 generate
+      MultX: multiplier 
+      PORT MAP
         (dataa => input_signal(i), 
          datab => signal_coeff(i), 
          result => res(i)
         );
   end generate Mult_Gen;
 
-Delay_Gen:
-    for i in 0 to 16 generate
-        DelayX: clkDelay PORT MAP
+Delay_Gen: for i in 0 to 16 generate
+        DelayX: clkDelay 
+        PORT MAP
           (clk => clk,
            enable_n => filter_en,
            signal_in => input_signal(i), 
@@ -114,7 +114,7 @@ Delay_Gen:
           );
   end generate Delay_Gen;
 
-addition: process(clk)
+addition: process(clk, res)
 variable result : signed (33 downto 0) := (others => '0');
 begin
     for i in 0 to 16 loop
