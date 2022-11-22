@@ -113,7 +113,7 @@ Delay_Gen: for i in 0 to 15 generate
           );
   end generate Delay_Gen;
 
-addition: process(clk)
+addition: process(clk, res)
 variable result : signed (33 downto 0) := (others => '0');
 begin
     for i in 0 to 16 loop
