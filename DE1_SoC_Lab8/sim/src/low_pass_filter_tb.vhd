@@ -19,7 +19,7 @@
 --
 --  REVISION HISTORY
 --
---  ___________________________________________________________________a____
+--  _______________________________________________________________________
 -- |  DATE    | USER | Ver |  Description                                  |
 -- |==========+======+=====+================================================
 -- |          |      |     |
@@ -61,7 +61,7 @@ ARCHITECTURE test OF low_pass_filter_tb IS
     SIGNAL filter_en_tb         : std_logic:= '0';
     SIGNAL data_out_tb          : std_logic_vector (15 downto 0)  := (others => 'X');
     type audioArray is array (39 downto 0) of signed (15 downto 0);
-    SIGNAL audioSampleArray: audioArray;
+    SIGNAL audioSampleArray: audioArray := (others=> (others=>'0'));
     SIGNAL sim_done: boolean := false; 
     -- <define your signals here> 
     
