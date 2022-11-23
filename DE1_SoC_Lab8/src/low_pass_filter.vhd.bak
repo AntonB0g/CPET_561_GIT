@@ -107,7 +107,7 @@ Mult_Gen: for i in 0 to 16 generate
       MultX: multiplier 
       PORT MAP
         (dataa => input_signal(i), 
-         datab => lpf_coeff(i), 
+         datab => hpf(i), 
          result => res(i)
         );
         result_signed(i) <= signed(res(i)(30 downto 15)); -- convert the 32 bit result to 16 bit signed result and store it in the result_signed array
