@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="223" />
+   <irq preferredWidth="47" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Basic Functions,Library/University Program/Bridges,Project,Library/University Program,Library/Processors and Peripherals/Embedded Processors,Library/Basic Functions/On Chip Memory,Library/Processors and Peripherals,Library/Basic Functions/Simulation; Debug and Verification,Library/Interface Protocols,Library/Interface Protocols/Serial,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library" />
+ <window width="1936" height="1048" x="1912" y="-8" />
+ <generation synthesis="VHDL" block_symbol_file="0" />
+</preferences>

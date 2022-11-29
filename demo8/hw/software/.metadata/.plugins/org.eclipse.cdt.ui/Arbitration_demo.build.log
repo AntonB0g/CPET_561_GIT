@@ -1,0 +1,9 @@
+20:57:32 **** Incremental Build of configuration Nios II for project Arbitration_demo ****
+make all 
+Info: Building ../Arbitration_demo_bsp/
+D:/Quartus_lite_18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Arbitration_demo_bsp/
+[BSP build complete]
+[Arbitration_demo build complete]
+
+20:57:34 Build Finished (took 1s.502ms)
+
