@@ -84,6 +84,8 @@ END COMPONENT;
     -- format: signal abc : <type>;
     ---------------------------------------------------------------------------
 signal output_1: signed (31 downto 0);
+signal swithc  : std_logic_vector (15 downto 0);
+signal write_reg: std_logic_vector (15 downto 0);
 type vector17_16 is array (natural range 0 to 16) of std_logic_vector(15 downto 0);
 type vector17_32 is array (natural range 0 to 16) of std_logic_vector(31 downto 0);
 type vector17_16_s is array (natural range 0 to 16) of signed(15 downto 0);
@@ -92,8 +94,8 @@ signal input_signal: vector17_16;
 signal res: vector17_32;
 type coeff_array is array (16 downto 0) of std_logic_vector(15 downto 0);
 
-constant hpf_coeff : coeff_array := (X"003E", X"FF9A", X"FF9E", X"0000", X"0535", X"05B2", X"F5AB", X"DAB6", X"4C91", 
-                                    X"DAB6", X"F5AB", X"05B2", X"0535", X"0000", X"FF9E", X"FF9A", X"003E");
+constant hpf_coeff : coeff_array := (X"003E", X"FF9A", X"FE9E", X"0000", X"0535", X"05B2", X"F5AB", X"DAB6", X"4C91", 
+                                    X"DAB6", X"F5AB", X"05B2", X"0535", X"0000", X"FE9E", X"FF9A", X"003E");
 
 constant lpf_coeff : coeff_array := (X"0051", X"00BA", X"01E1", X"0408", X"071A", X"0AAC", X"0E11", X"107F", X"1161",
                                      X"107F", X"0E11", X"0AAC", X"071A", X"0408", X"01E1", X"00BA", X"0051");
@@ -103,11 +105,35 @@ constant signal_coeff: coeff_array := (others => (others => '0'));
 BEGIN
 input_signal(0) <= data_in; -- first set of data (16 bits) is stored in the 0th location of the input_signal array
 
+-- first select the filter based on the switch register and after the filter is selected write the data to the write_reg.
+Filter_Selection: process(clk)
+	begin
+	if rising_edge(clk) then
+			if reset_n = '0' then
+				min_angle_count <= x"0000C350";
+				max_angle_count <= x"000186A0";
+			else 
+				if write_en = '1' then
+					if address = '0' then
+						min_angle_count <= writedata;
+				
+					else
+						max_angle_count <= writedata;
+					
+					end if;
+				else
+					min_angle_count <= min_angle_count;
+					max_angle_count <= max_angle_count;
+				end if;
+			end if;
+	end if;
+	end process;
+
 Mult_Gen: for i in 0 to 16 generate
       MultX: multiplier 
       PORT MAP
         (dataa => input_signal(i), 
-         datab => lpf_coeff(i), 
+         datab => hpf_coeff(i), 
          result => res(i)
         );
         result_signed(i) <= signed(res(i)(30 downto 15)); -- convert the 32 bit result to 16 bit signed result and store it in the result_signed array
