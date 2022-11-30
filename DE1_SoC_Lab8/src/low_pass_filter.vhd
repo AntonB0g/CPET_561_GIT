@@ -84,8 +84,8 @@ END COMPONENT;
     -- format: signal abc : <type>;
     ---------------------------------------------------------------------------
 signal output_1: signed (31 downto 0);
-signal swithc  : std_logic_vector (15 downto 0);
-signal write_reg: std_logic_vector (15 downto 0);
+signal swithc_reg  : std_logic_vector (15 downto 0);
+signal write_reg   : std_logic_vector (15 downto 0);
 type vector17_16 is array (natural range 0 to 16) of std_logic_vector(15 downto 0);
 type vector17_32 is array (natural range 0 to 16) of std_logic_vector(31 downto 0);
 type vector17_16_s is array (natural range 0 to 16) of signed(15 downto 0);
@@ -110,20 +110,20 @@ Filter_Selection: process(clk)
 	begin
 	if rising_edge(clk) then
 			if reset_n = '0' then
-				min_angle_count <= x"0000C350";
-				max_angle_count <= x"000186A0";
+        switch_reg <= (others => '0');
+        write_reg <=  (others => '0');
 			else 
 				if write_en = '1' then
 					if address = '0' then
-						min_angle_count <= writedata;
+						write_reg <= writedata;
 				
 					else
-						max_angle_count <= writedata;
+						switch_reg <= writedata;
 					
 					end if;
 				else
-					min_angle_count <= min_angle_count;
-					max_angle_count <= max_angle_count;
+        switch_reg <= switch_reg;
+        write_reg <= write_reg;
 				end if;
 			end if;
 	end if;
