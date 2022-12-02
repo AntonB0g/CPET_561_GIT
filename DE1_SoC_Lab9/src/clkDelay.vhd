@@ -2,17 +2,17 @@
 --***************************  VHDL Source Code  ******************************
 --*****************************************************************************
 --
---  DESIGNER NAME:  <insert your name here>
+--      DESIGNER NAME:  Anton Bogovik
 --
---       LAB NAME:  <lab # and name>
+--      LAB NAME:  Lab8: Filters
 --
---      FILE NAME:  <filename>
+--      FILE NAME:  1clkDelay.vhdl
 --
 -------------------------------------------------------------------------------
 --
 --  DESCRIPTION
 --
---    This design will <insert detailed description of design>. 
+--    This design will delay a signal for one clock. 
 --
 --
 -------------------------------------------------------------------------------
@@ -23,7 +23,7 @@
 -- |  DATE    | USER | Ver |  Description                                  |
 -- |==========+======+=====+================================================
 -- |          |      |     |
--- | 08/23/20 | XXX  | 1.0 | Created
+-- | 11/18/22 | XXX  | 1.0 | Created
 -- |          |      |     |
 --
 --*****************************************************************************
@@ -38,25 +38,7 @@
 ------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-
-PACKAGE <filename>_pkg IS
-  COMPONENT <filename> IS
-    GENERIC (
-      -- add any generic here
-      );
-
-    PORT (
-      clock    : IN  std_logic;
-      reset_n  : IN  std_logic;
-      -- add any inputs here
-      --
-      -- add any outputs here
-      );
-  END COMPONENT;
-END PACKAGE <filename>_pkg;
-
-
-
+USE ieee.std_logic_signed.ALL;
 ------------------------------------------------------------------------------
 -- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 -- |||| 
@@ -64,30 +46,24 @@ END PACKAGE <filename>_pkg;
 -- |||| 
 -- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ------------------------------------------------------------------------------
-ENTITY <filename>  IS
-  GENERIC (
-      -- add any generic here
-    );
-
-  PORT (
-    clock    : IN  std_logic;
-    reset_n  : IN  std_logic;
-    -- add any inputs here
+ENTITY  clkDelay IS
+PORT(
+    clk      : IN std_logic;
+    enable_n : IN std_logic;
+    signal_in: IN std_logic_vector(15 downto 0);
     --
-    -- add any outputs here
-    );
-END ENTITY <filename> ;
+    signal_out : OUT std_logic_vector(15 downto 0)
+);
+END clkDelay;
 
-ARCHITECTURE behave OF <filename>  IS
-
-    ---------------------------------------------------------------------------
-    -- define your signals here
-    -- format: signal abc : <type>;
-    ---------------------------------------------------------------------------
+ARCHITECTURE rtl of clkDelay IS
 BEGIN
-
-    ---------------------------------------------------------------------------
-    -- define your equations/design here
-    ---------------------------------------------------------------------------
-
-END ARCHITECTURE behave;
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if enable_n = '0' then
+                signal_out <= signal_in;
+            end if;
+        end if;
+    end process;
+END rtl;

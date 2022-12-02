@@ -1,0 +1,9 @@
+12:57:07 **** Incremental Build of configuration Nios II for project Audio_filter_test3 ****
+make all 
+Info: Building ../Audio_filter_test3_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Audio_filter_test3_bsp/
+[BSP build complete]
+[Audio_filter_test3 build complete]
+
+12:57:09 Build Finished (took 1s.297ms)
+

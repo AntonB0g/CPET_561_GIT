@@ -38,7 +38,7 @@ END TOP;
 ARCHITECTURE rtl OF TOP IS
 
     
-      component nios_system is
+      component nios_system_new is
         port (            
 
 						AUD_ADCDAT_to_the_audio_0   : in    std_logic                     := '0';             --       audio.ADCDAT
@@ -63,7 +63,7 @@ ARCHITECTURE rtl OF TOP IS
 						sdram_clk_clk               : out   std_logic;                                        --   sdram_clk.clk
 						sw_export                   : in    std_logic_vector(7 downto 0)  := (others => '0')  --          sw.export
         );
-    end component nios_system;
+    end component nios_system_new;
 	 
     ----------------------------------------------------------------------------
     --               Internal Wires and Registers Declarations                --
@@ -94,7 +94,7 @@ begin
 	GPIO_0(3) <= test_sig; 	
 
 	 
-  NiosII : nios_system
+  NiosII : nios_system_new
         PORT MAP(
             
 						AUD_ADCDAT_to_the_audio_0     => AUD_ADCDAT,

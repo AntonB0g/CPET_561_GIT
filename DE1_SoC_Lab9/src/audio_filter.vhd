@@ -4,9 +4,9 @@
 --
 --      DESIGNER NAME:  Anton Bogovik
 --
---      LAB NAME:  Lab8: Filters
+--      LAB NAME:  Lab9: Audio Filters
 --
---      FILE NAME:  low_pass_filter.vhdl
+--      FILE NAME:  audio_filter.vhdl
 --
 -------------------------------------------------------------------------------
 --
@@ -50,9 +50,10 @@ USE ieee.numeric_std.ALL;
 entity low_pass_filter is
   port (
         clk : in std_logic; -- CLOCK_50
+		    write: in std_logic;
+		    address: in std_logic;
         reset_n : in std_logic; -- active low reset
-        data_in : in std_logic_vector(15 downto 0); --Audio sample, in 16 bit fixed point format (15 bits of assumed decimal)
-        filter_en : in std_logic; --This is enables the internal registers and coincides with a new audio sample
+        writedata : in std_logic_vector(15 downto 0); --Audio sample, in 16 bit fixed point format (15 bits of assumed decimal
         data_out : out std_logic_vector(15 downto 0) --This is the filtered audio signal out, in 16 bit fixed point format
   );
   end low_pass_filter;
@@ -84,9 +85,10 @@ END COMPONENT;
     -- format: signal abc : <type>;
     ---------------------------------------------------------------------------
 signal output_1: signed (31 downto 0);
-signal switches: std_logic_vector (15 downto 0);
-signal swithc_reg  : std_logic_vector (15 downto 0);
+signal switch_reg  : std_logic_vector (15 downto 0);
 signal write_reg   : std_logic_vector (15 downto 0);
+signal filter_en   : std_logic;
+
 type vector17_16 is array (natural range 0 to 16) of std_logic_vector(15 downto 0);
 type vector17_32 is array (natural range 0 to 16) of std_logic_vector(31 downto 0);
 type vector17_16_s is array (natural range 0 to 16) of signed(15 downto 0);
@@ -100,16 +102,69 @@ constant hpf_coeff : coeff_array := (X"003E", X"FF9A", X"FE9E", X"0000", X"0535"
 
 constant lpf_coeff : coeff_array := (X"0051", X"00BA", X"01E1", X"0408", X"071A", X"0AAC", X"0E11", X"107F", X"1161",
                                      X"107F", X"0E11", X"0AAC", X"071A", X"0408", X"01E1", X"00BA", X"0051");
+signal filter_coeff: coeff_array := (others => (others => '0'));
 
 BEGIN
-input_signal(0) <= data_in; -- first set of data (16 bits) is stored in the 0th location of the input_signal array
+input_signal(0) <= writedata; -- first set of data (16 bits) is stored in the 0th location of the input_signal array
 
 -- first select the filter based on the switch register and after the filter is selected write the data to the write_reg.
+ 
+Write_Selection: process(clk)
+	begin
+	if rising_edge(clk) then
+			if reset_n = '0' then
+				switch_reg <= (others => '0');
+				write_reg <=  (others => '0');
+			else 
+				if write = '1' then
+					if address = '0' then
+						write_reg <= writedata;
+					else
+						switch_reg <= writedata;
+					end if;
+				else
+					switch_reg <= switch_reg;
+					write_reg <= write_reg;
+				end if;
+			end if;
+	end if;
+	end process;
+
+Filter_Selection: process(clk)
+  begin
+    if rising_edge(clk) then
+			if reset_n = '0' then
+				filter_coeff <= (others => (others => '0'));
+			else
+				if (switch_reg = X"0001") then
+					filter_coeff <= hpf_coeff;
+				elsif (switch_reg = X"0002") then
+					filter_coeff <= lpf_coeff;
+				else
+					filter_coeff <= filter_coeff;
+				end if;
+			end if;
+	end if;
+  end process;
+
+Filter_Enable: process(clk)
+ begin
+ if rising_edge(clk) then
+		if reset_n = '0' then
+			filter_en <= '0';
+		else
+			if(address = '0' and write = '1') then
+				filter_en <= '1';
+			end if;
+		end if;
+ end if;
+end process;
+        
 Mult_Gen: for i in 0 to 16 generate
       MultX: multiplier 
       PORT MAP
         (dataa => input_signal(i), 
-         datab => hpf_coeff(i), 
+         datab => filter_coeff(i), 
          result => res(i)
         );
         result_signed(i) <= signed(res(i)(30 downto 15)); -- convert the 32 bit result to 16 bit signed result and store it in the result_signed array
